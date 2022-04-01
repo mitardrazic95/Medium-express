@@ -6,10 +6,8 @@ const io = require('socket.io')(http, {
 });
 
 app.get('/', function(req, res) {
-   res.sendfile('public/index.html');
+   res.sendFile('index.html', { root: __dirname });
 });
-
-app.use(express.static('public'));
 
 //Whenever someone connects this gets executed
 io.on('connection', function(socket) {
