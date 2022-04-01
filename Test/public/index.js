@@ -6,7 +6,7 @@ const io = require('socket.io')(http, {
 });
 
 app.get('/', function(req, res) {
-   res.sendfile('index.html');
+   res.sendfile('public/index.html');
 });
 
 app.use(express.static('public'));
